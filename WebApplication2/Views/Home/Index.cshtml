@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+@*@model IList<Student>
+
+<div class="container m-5 bg-white">
+    @foreach (Student student in Model)
+    {
+        <p class="lead text-muted fw-bold">@student.Id   @student.Name</p>
+    }
+</div>
+
+
+@model IList<Lesson>
+
+<div class="container m-5 bg-white">
+    @foreach (Lesson lesson in Model)
+    {
+        <p class="lead text-muted fw-bold">@lesson.Id   @lesson.Title</p>
+    }
+</div>
+*@
+
+@model IList<StudentLesson>
+
+<div class="container m-5 bg-white">
+    @foreach (StudentLesson studentLesson in Model)
+    {
+        <p class="lead text-muted fw-bold">@studentLesson.studentId   @studentLesson.StudentName  @studentLesson.LessonId @studentLesson.LessonTitle   @studentLesson.LessonNum  @studentLesson.LessonStudentId </p>
+    }
+</div>
